@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; 
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #d1d5db; 
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4299e1; 
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+input.error {
+    background-color: #ffe5e5; 
+    border: 1px solid #f56565; 
+    box-shadow: 0 0 5px rgba(245, 101, 101, 0.3); 
+}
+
+button.primary {
+    background-color: #48bb78; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px; 
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+button.primary:hover {
+    background-color: #2f855a; 
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+button[name="verify_email"] {
+    background-color: #4299e1; 
+    color: #fff;
+}
+
+button[name="verify_email"]:hover {
+    background-color: #2b6cb0;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.success {
+    color: #2f855a;
+    background-color: #f0fff4; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c6f6d5;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px; 
+}
+
+.error {
+    color: #c53030;
+    background-color: #fff5f5; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fed7d7;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+
+a {
+    color: #4299e1;
+    text-decoration: none;
+    font-size: 12px; 
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+.name-row {
+    display: flex;
+    gap: 15px; 
+}
+
+.name-field {
+    flex: 1;
+}
+
+.address-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+.address-field {
+    flex: 1 1 200px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .name-row, .address-row {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    h1 {
+        font-size: 18px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        font-size: 11px; 
+        padding: 6px;
+    }
+}
